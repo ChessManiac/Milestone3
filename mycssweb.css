@@ -1,0 +1,183 @@
+:root {
+    --primary-color: #42a463;
+    --secondary-color: #6dafec;
+    --highlight-color: #87e2f8;
+    --hover-color: #3498db;
+    --text-color: #2b0404;
+    --border-color: #ccc;
+    --highlight-bg-color: #f3ae91;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--primary-color);
+    margin: 0;
+    padding: 0;
+}
+
+
+h1, h2 {
+    color: var(--text-color);
+    font-size: 1.8rem;
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+
+
+nav {
+    background-color: var(--secondary-color);
+    color: #1d5361;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav h2 {
+    margin: 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    color: var(--highlight-color);
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+nav a:hover {
+    color: var(--hover-color);
+    text-decoration: underline;
+}
+
+
+hr {
+    border: 1px solid var(--border-color);
+    margin: 20px 0;
+}
+
+
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #c4ce38;
+    color: #131212;
+}
+
+
+a {
+    color: var(--highlight-color);
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+
+form {
+    background-color: var(--highlight-bg-color);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+}
+
+label {
+    font-size: 1.1rem;
+    display: block;
+    margin-bottom: 8px;
+}
+
+input[type="text"] {
+    padding: 10px;
+    font-size: 1rem;
+    width: 100%;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+
+@media screen and (max-width: 767px) {
+    h1 {
+        font-size: 2rem; 
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    nav {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    nav h2 {
+        font-size: 1.5rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+        padding-left: 0;
+    }
+
+    img {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    table th, table td {
+        font-size: 0.9rem;
+        padding: 8px;
+    }
+
+    form {
+        padding: 15px;
+    }
+
+    label, input[type="text"] {
+        font-size: 0.9rem;
+    }
+}
+
+
+@media screen and (min-width: 768px) {
+    .content {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .content > div {
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+}
